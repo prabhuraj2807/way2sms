@@ -2,14 +2,15 @@ import urllib2
 import sys
 import os
 import cookielib
+import getpass
 from stat import *
 
 message=raw_input('Enter Message :')
 sender = raw_input('Enter Receiver Mob Number : ');
 if __name__ == "__main__":
     print("\t\t\t\t***** m.way2sms.com ******")
-    user = '9698079048'
-    password='MOUNaguru24'
+    user = str(raw_input('Enter registed mobile number:'))
+    password = getpass.getpass()
  
     message = "+".join(message.split(' '))
     url= 'http://site24.way2sms.com/Login1.action?'
